@@ -18,10 +18,30 @@ let arr: (number | boolean[] | (string | (string | number)[])[])[];
 arr = [20, [true], ["n", ["n", 3]]]
 
 
-function reportErrors(username:string, age: number) {
+function reportErrors(username: string, age: number) {
     let rank = "Professor";
     return `Username: ${username}`;
     console.log("We Will Not Reach Here");
-  }
-  
-  console.log(reportErrors("Elzero", 40));
+}
+
+console.log(reportErrors("Elzero", 40));
+
+
+let nothing;
+let theName: string = "Elzero";
+function showMyDetails(a = "", b = "", c) {
+    return `${a}${b}${c}`;
+}
+
+// Replace ???? With The Available Variables As Argument To Get The Result
+console.log(showMyDetails("n", "s", "f")); // Elzero
+
+
+function showMsg(user?: number|string, age?: boolean | number|string, country?: boolean | string) {
+    return `${user}${age}${country}`;
+}
+
+console.log(showMsg());
+console.log(showMsg("Elzero"));
+console.log(showMsg("Elzero", 40));
+console.log(showMsg("Elzero", "40", "Egypt"));
