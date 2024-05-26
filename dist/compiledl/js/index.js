@@ -11,10 +11,10 @@ console.log(printInfo(10, 20)); // Value One Is 10, Value Two Is 20
 console.log(printInfo("10", "20")); // Value One Is "10", Value Two Is "20"
 // console.log(printInfo(true, [1, 2, 3]));
 let arr;
-arr = [20, [true], ["n", ["n", 3]]];
-function reportErrors(username, age) {
-    let rank = "Professor";
-    return `Username: ${username}`;
-    console.log("We Will Not Reach Here");
-}
-console.log(reportErrors("Elzero", 40));
+arr = [20, [true], ["n", ["n", 3]],
+    function reportErrors(username, age) {
+        let rank = "Professor";
+        return `Username: ${username}`;
+        console.log("We Will Not Reach Here");
+    },
+    console.log(reportErrors("Elzero", 40))];

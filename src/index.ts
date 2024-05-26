@@ -16,3 +16,12 @@ console.log(printInfo("10", "20")); // Value One Is "10", Value Two Is "20"
 
 let arr: (number | boolean[] | (string | (string | number)[])[])[];
 arr = [20, [true], ["n", ["n", 3]]]
+
+
+function reportErrors(username:string, age: number) {
+    let rank = "Professor";
+    return `Username: ${username}`;
+    console.log("We Will Not Reach Here");
+  }
+  
+  console.log(reportErrors("Elzero", 40));
