@@ -51,7 +51,7 @@
 //     x.forEach(e => {
 //         console.log(`The Value Is ${e} And Type Is ${typeof(x)}`)
 //     });
-   
+
 // }
 
 // // Using The Function => Do Not Edit
@@ -59,14 +59,22 @@
 // console.log(printInConsole("A", "B", "C"));
 // console.log(printInConsole(true, false, false, true, true));
 
-type buttons = {
-    name : string,
-    age : number
-}
+// type buttons = {
+//     name : string,
+//     age : number
+// }
 
-function moves (x: buttons){
-    console.log(x);
-    
-}
+// function moves (x: buttons){
+//     console.log(x);
 
-moves({name : 'nono', age : 23})
+// }
+
+// moves({name : 'nono', age : 23})
+
+type nums = true | false
+function compare(num1: number, num2: number): nums {
+    return num1 > num2
+}
+compare (10, 5)
+compare (15, 35)
+
