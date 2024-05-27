@@ -47,14 +47,26 @@
 // console.log(showMsg("Elzero", "40", "Egypt"));
 
 
-function printInConsole(...x: number[] | string[] | boolean[]) {
-    x.forEach(e => {
-        console.log(`The Value Is ${e} And Type Is ${typeof(x)}`)
-    });
+// function printInConsole(...x: number[] | string[] | boolean[]) {
+//     x.forEach(e => {
+//         console.log(`The Value Is ${e} And Type Is ${typeof(x)}`)
+//     });
    
+// }
+
+// // Using The Function => Do Not Edit
+// console.log(printInConsole(1, 2, 3, 4, 5));
+// console.log(printInConsole("A", "B", "C"));
+// console.log(printInConsole(true, false, false, true, true));
+
+type buttons = {
+    name : string,
+    age : number
 }
 
-// Using The Function => Do Not Edit
-console.log(printInConsole(1, 2, 3, 4, 5));
-console.log(printInConsole("A", "B", "C"));
-console.log(printInConsole(true, false, false, true, true));
+function moves (x: buttons){
+    console.log(x);
+    
+}
+
+moves({name : 'nono', age : 23})
