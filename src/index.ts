@@ -205,17 +205,32 @@
 //   console.log(yesOrNo(8)); // False
 
 // 5--
-function isHeOld(age: number | string): any {
-    if (typeof (age) == "number") {
-        return age > 40;
-    }
-    else {
-        return "error"
-    }
+// function isHeOld(age: number | string): any {
+//     if (typeof (age) == "number") {
+//         return age > 40;
+//     }
+//     else {
+//         return "error"
+//     }
 
-}
+// }
 
+// // Do Not Edit Here
+// console.log(isHeOld("100")); // Error
+// console.log(isHeOld(45)); // "Yes"
+// console.log(isHeOld(30)); // "No"
+
+
+// 6-
+let post: readonly [number, string, boolean];
+
+// post = [100, 200, "Title"]; // Error
+// post = ["Title", 100, true]; // Error
+post = [100, "Title", true]; // Good
+
+// post.push("Elzero"); // Error => Cant Add
+let [id, title, state] = post;
 // Do Not Edit Here
-console.log(isHeOld("100")); // Error
-console.log(isHeOld(45)); // "Yes"
-console.log(isHeOld(30)); // "No"
+console.log(id); // 100
+console.log(title); // "Title"
+console.log(state); // true
