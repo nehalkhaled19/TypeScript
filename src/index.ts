@@ -107,21 +107,37 @@
 // let x = "200"
 // console.log((x as string).repeat(2));
 
-// ------------------------------intersection type -------------------------
+// // ------------------------------intersection type -------------------------
 
-type a = {
-    one: string,
-    two: number
+// type a = {
+//     one: string,
+//     two: number
+// }
+
+// type b = a & {
+//     three: boolean
+// }
+
+// function tryTypes (x: b){
+//     console.log(x.one);
+//     console.log(x.three);
+//     console.log(x.two);
+// }
+
+// tryTypes({one:"nehal", two : 23,three: true})
+
+// // ------------------------------object type -------------------------
+const myObject: {
+    id: number,
+    name: string,
+    age: number,
+    state?: "string"
+    gender: string
+} = {
+    id: 1,
+    name: "nono",
+    age: 23,
+    gender: "female"
 }
 
-type b = a & {
-    three: boolean
-}
-
-function tryTypes (x: b){
-    console.log(x.one);
-    console.log(x.three);
-    console.log(x.two);
-}
-
-tryTypes({one:"nehal", two : 23,three: true})
+console.log(`Her id is ${myObject.id}, Her name is ${myObject.name}, Her age is ${myObject.age}, Her gender is ${myObject.gender}`);
