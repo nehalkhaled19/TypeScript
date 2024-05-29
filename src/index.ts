@@ -222,15 +222,32 @@
 
 
 // 6-
-let post: readonly [number, string, boolean];
+// let post: readonly [number, string, boolean];
 
-// post = [100, 200, "Title"]; // Error
-// post = ["Title", 100, true]; // Error
-post = [100, "Title", true]; // Good
+// // post = [100, 200, "Title"]; // Error
+// // post = ["Title", 100, true]; // Error
+// post = [100, "Title", true]; // Good
 
-// post.push("Elzero"); // Error => Cant Add
-let [id, title, state] = post;
-// Do Not Edit Here
-console.log(id); // 100
-console.log(title); // "Title"
-console.log(state); // true
+// // post.push("Elzero"); // Error => Cant Add
+// let [id, title, state] = post;
+// // Do Not Edit Here
+// console.log(id); // 100
+// console.log(title); // "Title"
+// console.log(state); // true
+
+// 7--
+// Create Enums + Function Here
+function getNum(Hard: number):number{
+    return Hard -10
+}
+enum Game {
+    Easy = 100,
+    Medium = Easy - 20,
+    Hard = Medium - (Easy / 2),
+    Insane = getNum(Hard)
+}
+// Output
+console.log(Game.Easy); // 100
+console.log(Game.Medium); // 80
+console.log(Game.Hard); // 30
+console.log(Game.Insane); // 20

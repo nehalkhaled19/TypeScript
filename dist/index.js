@@ -155,15 +155,43 @@
 //   console.log(yesOrNo(30)); // True
 //   console.log(yesOrNo(8)); // False
 // 5--
-function isHeOld(age) {
-    if (typeof (age) == "number") {
-        return age > 40;
-    }
-    else {
-        return "error";
-    }
+// function isHeOld(age: number | string): any {
+//     if (typeof (age) == "number") {
+//         return age > 40;
+//     }
+//     else {
+//         return "error"
+//     }
+// }
+// // Do Not Edit Here
+// console.log(isHeOld("100")); // Error
+// console.log(isHeOld(45)); // "Yes"
+// console.log(isHeOld(30)); // "No"
+// 6-
+// let post: readonly [number, string, boolean];
+// // post = [100, 200, "Title"]; // Error
+// // post = ["Title", 100, true]; // Error
+// post = [100, "Title", true]; // Good
+// // post.push("Elzero"); // Error => Cant Add
+// let [id, title, state] = post;
+// // Do Not Edit Here
+// console.log(id); // 100
+// console.log(title); // "Title"
+// console.log(state); // true
+// 7--
+// Create Enums + Function Here
+function getNum(Hard) {
+    return Hard - 10;
 }
-// Do Not Edit Here
-console.log(isHeOld("100")); // Error
-console.log(isHeOld(45)); // "Yes"
-console.log(isHeOld(30)); // "No"
+var Game;
+(function (Game) {
+    Game[Game["Easy"] = 100] = "Easy";
+    Game[Game["Medium"] = 80] = "Medium";
+    Game[Game["Hard"] = 30] = "Hard";
+    Game[Game["Insane"] = getNum(Game.Hard)] = "Insane";
+})(Game || (Game = {}));
+// Output
+console.log(Game.Easy); // 100
+console.log(Game.Medium); // 80
+console.log(Game.Hard); // 30
+console.log(Game.Insane); // 20
