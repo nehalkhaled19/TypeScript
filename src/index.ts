@@ -78,25 +78,32 @@
 // compare (10, 5)
 // compare (15, 35)
 
-enum years {
-    newEmploye = 0 ,
-    expert = 5
-}
+
+// -------------------------------enum-----------------------------------
+// enum years {
+//     newEmploye = 0 ,
+//     expert = 5
+// }
  
-function getMoreExerpeince() : number{
-    return 5
-}
+// function getMoreExerpeince() : number{
+//     return 5
+// }
 
-const junior = 2
-const entrylevel = 1
-const senior = 3
-const teamLeader = 5
+// const junior = 2
+// const entrylevel = 1
+// const senior = 3
+// const teamLeader = 5
 
-enum level {
-    junior = 2,
-    entrylevel = years.newEmploye,
-    senior = 3,
-    teamLeader = getMoreExerpeince()
-}
+// enum level {
+//     junior = 2,
+//     entrylevel = years.newEmploye,
+//     senior = 3,
+//     teamLeader = getMoreExerpeince()
+// }
 
-console.log(`Your level is entey level, Your experinece is ${level.entrylevel}`)
+// console.log(`Your level is entey level, Your experinece is ${level.entrylevel}`)
+
+
+let x = "200"
+console.log((x as string).repeat(2));
+
