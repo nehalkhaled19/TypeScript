@@ -84,7 +84,7 @@
 //     newEmploye = 0 ,
 //     expert = 5
 // }
- 
+
 // function getMoreExerpeince() : number{
 //     return 5
 // }
@@ -104,6 +104,24 @@
 // console.log(`Your level is entey level, Your experinece is ${level.entrylevel}`)
 
 
-let x = "200"
-console.log((x as string).repeat(2));
+// let x = "200"
+// console.log((x as string).repeat(2));
 
+// ------------------------------intersection type -------------------------
+
+type a = {
+    one: string,
+    two: number
+}
+
+type b = a & {
+    three: boolean
+}
+
+function tryTypes (x: b){
+    console.log(x.one);
+    console.log(x.three);
+    console.log(x.two);
+}
+
+tryTypes({one:"nehal", two : 23,three: true})
