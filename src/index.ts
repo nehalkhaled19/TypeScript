@@ -127,17 +127,79 @@
 // tryTypes({one:"nehal", two : 23,three: true})
 
 // // ------------------------------object type -------------------------
-const myObject: {
-    id: number,
-    name: string,
-    age: number,
-    state?: "string"
-    gender: string
-} = {
-    id: 1,
-    name: "nono",
-    age: 23,
-    gender: "female"
-}
+// const myObject: {
+//     id: number,
+//     name: string,
+//     age: number,
+//     state?: "string"
+//     gender: string
+// } = {
+//     id: 1,
+//     name: "nono",
+//     age: 23,
+//     gender: "female"
+// }
 
-console.log(`Her id is ${myObject.id}, Her name is ${myObject.name}, Her age is ${myObject.age}, Her gender is ${myObject.gender}`);
+// console.log(`Her id is ${myObject.id}, Her name is ${myObject.name}, Her age is ${myObject.age}, Her gender is ${myObject.gender}`);
+
+
+// // ------------------------------Assignment 2-------------------------
+
+// 1--
+// // Wtrite Your Code Here
+// type n = number
+// // Do Not Edit Here
+// let myData: n;
+// myData = 1000; // No Problem Here
+// myData = +true; // No Problem Here
+// console.log(myData);
+
+
+// 2--
+// Write Your Code Here
+// type mix = number | boolean
+// // Do Not Edit Here
+// let myInfo: mix;
+// myInfo = 1000; // No Problem Here
+// myInfo = true; // No Problem Here
+
+// 3--
+// Write Your Code Here
+// type Info = {
+//     theName: string,
+//     theAge: number,
+// }
+// type Full = Info & {
+//     country:string
+// }
+
+// // Do Not Edit Here
+// function showInfo(data: Info) {
+//     console.log(`The Name Is ${data.theName}`);
+//     console.log(`The Age Is ${data.theAge}`);
+//   }
+//   console.log(showInfo({ theName: "Elzero", theAge: 40 }));
+  
+//   function showFullInfo(data: Full) {
+//     console.log(`The Name Is ${data.theName}`);
+//     console.log(`The Age Is ${data.theAge}`);
+//     console.log(`The Country Is ${data.country}`);
+//   }
+//   console.log(showFullInfo({ theName: "Elzero", theAge: 4, country: "Egypt" }));
+
+// 4--
+function yesOrNo(val: number | string) : true | false | string  {
+    
+    if( typeof (val) == "number"){
+        return val > 10;
+    }
+    else {
+        return "error"
+    }
+  
+  }
+  
+  // Do Not Edit Here
+  console.log(yesOrNo("100")); // Error
+  console.log(yesOrNo(30)); // True
+  console.log(yesOrNo(8)); // False
