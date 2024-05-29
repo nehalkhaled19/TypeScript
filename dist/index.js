@@ -141,16 +141,29 @@
 //     console.log(`The Country Is ${data.country}`);
 //   }
 //   console.log(showFullInfo({ theName: "Elzero", theAge: 4, country: "Egypt" }));
-// 4--
-function yesOrNo(val) {
-    if (typeof (val) == "number") {
-        return val > 10;
+// // 4--
+// function yesOrNo(val: number | string) : true | false | string  {
+//     if( typeof (val) == "number"){
+//         return val > 10;
+//     }
+//     else {
+//         return "error"
+//     }
+//   }
+//   // Do Not Edit Here
+//   console.log(yesOrNo("100")); // Error
+//   console.log(yesOrNo(30)); // True
+//   console.log(yesOrNo(8)); // False
+// 5--
+function isHeOld(age) {
+    if (typeof (age) == "number") {
+        return age > 40;
     }
     else {
         return "error";
     }
 }
 // Do Not Edit Here
-console.log(yesOrNo("100")); // Error
-console.log(yesOrNo(30)); // True
-console.log(yesOrNo(8)); // False
+console.log(isHeOld("100")); // Error
+console.log(isHeOld(45)); // "Yes"
+console.log(isHeOld(30)); // "No"

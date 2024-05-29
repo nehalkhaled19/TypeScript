@@ -179,7 +179,7 @@
 //     console.log(`The Age Is ${data.theAge}`);
 //   }
 //   console.log(showInfo({ theName: "Elzero", theAge: 40 }));
-  
+
 //   function showFullInfo(data: Full) {
 //     console.log(`The Name Is ${data.theName}`);
 //     console.log(`The Age Is ${data.theAge}`);
@@ -187,19 +187,35 @@
 //   }
 //   console.log(showFullInfo({ theName: "Elzero", theAge: 4, country: "Egypt" }));
 
-// 4--
-function yesOrNo(val: number | string) : true | false | string  {
-    
-    if( typeof (val) == "number"){
-        return val > 10;
+// // 4--
+// function yesOrNo(val: number | string) : true | false | string  {
+
+//     if( typeof (val) == "number"){
+//         return val > 10;
+//     }
+//     else {
+//         return "error"
+//     }
+
+//   }
+
+//   // Do Not Edit Here
+//   console.log(yesOrNo("100")); // Error
+//   console.log(yesOrNo(30)); // True
+//   console.log(yesOrNo(8)); // False
+
+// 5--
+function isHeOld(age: number | string): any {
+    if (typeof (age) == "number") {
+        return age > 40;
     }
     else {
         return "error"
     }
-  
-  }
-  
-  // Do Not Edit Here
-  console.log(yesOrNo("100")); // Error
-  console.log(yesOrNo(30)); // True
-  console.log(yesOrNo(8)); // False
+
+}
+
+// Do Not Edit Here
+console.log(isHeOld("100")); // Error
+console.log(isHeOld(45)); // "Yes"
+console.log(isHeOld(30)); // "No"
